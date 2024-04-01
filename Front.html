@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SquadVentures</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: blanchedalmond;
+    }
+    #sidebar {
+        width: auto;
+        height: 100%;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        padding-top: 1px;
+      
+        color: #fff;
+    }
+    #sidebar ul {
+        padding: 0;
+        list-style-type: none;
+    }
+    #sidebar ul li {
+        padding: 10px;
+        cursor: pointer;
+        position: relative;
+        text-align: center; /* Center the text */
+    }
+    #sidebar ul li:hover {
+        background-color: #555;
+
+    }
+    .line {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 100%;
+        background-color: red;
+        display: none;
+    }
+    #pic{
+        color: #fff;
+        text-decoration: none   ;
+    }
+    .words{
+        margin-left: 125px;
+        margin-top: 50px;
+        margin-right: 35px;
+    }
+    .p11{
+        text-align: center;
+        font-size: x-large;
+    }
+    .borders{
+        background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4); 
+  color: whitesmoke;
+  font-weight: bold;
+  border: 3px solid black;
+  z-index: 2;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+<div id="sidebar">
+    <ul>
+        <li onclick="toggleLine(this)"><a  id="pic" href="pics.html">Picture</a></li>
+        <li onclick="toggleLine(this)"><a  id="pic" href="Vids.html">Video</a></li>
+        <li onclick="toggleLine(this)"><a  id="pic" href="objectives.html">Objestives</a></li>
+        <li onclick="toggleLine(this)"><a  id="pic" href="info.html">Info</a></li>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <li onclick="toggleLine(this)"><a id="pic" href="login page.html">Log Out</a></li>
+    </ul>
+    <div class="line"></div>
+</div>
+<div class="words">
+    <br>
+    <div class="borders">
+    <h1>Welcome To SquadVentures</h1>
+    </div><br><br>
+    <div class="p11">
+    <p1>
+        Embrace the exhilarating spirit of Squadventures, where every expedition is a testament to the enduring bonds of friendship and the limitless potential of shared exploration. Together, we weave tales of adventure and discovery, forging memories that endure a lifetime. Through laughter, challenges, and triumphs, our squad becomes a beacon of camaraderie, inspiring each other to venture beyond the ordinary and embrace the extraordinary. In the tapestry of our collective experiences, we find not just destinations, but profound connections and a deeper understanding of the world and ourselves. So let us embark on this journey, united in our quest for discovery, as we redefine the meaning of adventure and create moments that echo through eternity.</p1>
+    </div>
+
+</div>
+
+<script>
+    function toggleLine(element) {
+        var line = document.querySelector('.line');
+        var position = element.offsetTop + element.offsetHeight;
+        line.style.top = position + 'px';
+        line.style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
